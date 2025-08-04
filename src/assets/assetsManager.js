@@ -19,14 +19,30 @@ import img4 from './images/featured-category-3.png';
 
 export const featuredCategoryImages = {img1, img2, img3, img4}
 
+// Categories Images
+import bucheinbandstoffe from './images/categories/1.jpg';
+import baenderUndSchnuere from './images/categories/2.png';
+import dekoplatten from './images/categories/3.jpg';
+import heisspraegen from './images/categories/4.jpg';
+import klebstoffe from './images/categories/5.jpg';
+import kleinmaterial from './images/categories/6.jpg';
+import loseblattsysteme from './images/categories/7.jpg';
+import maschinen from './images/categories/8.jpg';
+import pantaBuerosysteme from './images/categories/9.jpg';
+import papierUndKarton from './images/categories/10.jpg';
+import selbstklebefolien from './images/categories/11.png';
+import werkzeuge from './images/categories/12.jpg';
+
 export const categories = [
     {
         title: 'Bucheinbandstoffe',
         url: '/bucheinbandstoffe',
+        image: bucheinbandstoffe
     },
     {
         title: 'Bänder und Schnüre',
         url: '/baender-und-schnuere',
+        image: baenderUndSchnuere,
         children: [
             {
                 heading: 'Bande',
@@ -42,38 +58,52 @@ export const categories = [
     {
         title: 'Dekoplatten',
         url: '/dekoplatten',
+        image: dekoplatten
     },
     {
         title: 'Heißprägen', 
         url: '/heisspraegen',
+        image: heisspraegen
+    },
+    {
+        title: 'Klebstoffe',
+        url: '/klebstoffe',
+        image: klebstoffe
     },
     {
         title: 'Kleinmaterial',
         url: '/kleinmaterial',
+        image: kleinmaterial
     },
     {
         title: 'Loseblattsysteme',
         url: '/loseblattsysteme',
+        image: loseblattsysteme
     },
     {
         title: 'Maschinen',
         url: '/maschinen',
+        image: maschinen
     },
     {
         title: 'Panta Bürosysteme',
         url: '/panta-buerosysteme',
+        image: pantaBuerosysteme
     },
     {
         title: 'Papier und Karton',
         url: '/papier-und-karton',
+        image: papierUndKarton
     },
     {
         title: 'Selbstklebefolien', 
         url: '/selbstklebefolien',
+        image: selbstklebefolien
     },
     {
         title: 'Werkzeuge',
         url: '/werkzeuge',
+        image: werkzeuge
     },
     {
         title: 'Abverkauf',

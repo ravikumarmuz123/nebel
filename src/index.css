@@ -102,6 +102,14 @@ h2.section-title {
     background: #53A447;
 }
 
+.g-15px,
+.gy-15px {
+    --bs-gutter-y: 15px;
+}
+.g-15px,
+.gx-15px {
+    --bs-gutter-x: 15px;
+}
 .g-20px,
 .gy-20px {
     --bs-gutter-y: 20px;
@@ -124,4 +132,7 @@ h2.section-title {
 
 .py-120px {
     padding: 120px 0;
+}
+.mb-120px {
+    margin-bottom: 120px;
 }

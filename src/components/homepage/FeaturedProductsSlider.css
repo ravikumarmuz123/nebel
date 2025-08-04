@@ -1,0 +1,32 @@
+#featureProductSlider .content {
+    position: absolute;
+    left: 45px;
+    top: 90px;
+    z-index: 1;
+    max-width: 450px;
+}
+
+#featureProductSlider .content h2 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+#featureProductSlider .carousel-indicators{
+    margin-bottom: 20px;
+}
+#featureProductSlider .carousel-indicators [data-bs-target]{
+    background-color: #FFFFFF;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    opacity: 1;
+    border: none;
+}
+#featureProductSlider .carousel-indicators .active{
+    background-color: var(--color-primary);
+    width: 50px;
+    border-radius: 10px;
+}

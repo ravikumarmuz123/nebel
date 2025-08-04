@@ -1,0 +1,20 @@
+footer#site-footer .footer_top_wrapper {
+    padding-top: 105px;
+    padding-bottom: 40px;
+    background: linear-gradient(0deg, rgba(139, 150, 168, 0.3) 0%, rgba(139, 150, 168, 0) 100%);
+}
+
+footer#site-footer .footer_top_wrapper .block_title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+footer#site-footer .footer_bottom_wrapper {
+    padding: 16px 0;
+    background-color: #53A447;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+}

@@ -1,0 +1,87 @@
+.categories-menu-wrapper{
+    position: relative;
+}
+.categories-menu-wrapper>h6 {
+    padding: 12px 16px;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.categories-menu-wrapper ul.categories-menu {
+    background-color: #FFFFFF;
+    padding: 13px 0;
+}
+
+.categories-menu-wrapper ul.categories-menu>li {
+    padding: 0 16px 0 13px;
+    border-left: 3px solid var(--color-secondary);
+    margin-bottom: 1px;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(1) {
+    border-color: #FD7F01;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(2) {
+    border-color: #FEC81A;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(3) {
+    border-color: #FFFF03;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(4) {
+    border-color: #D1D103;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(5) {
+    border-color: #C2F950;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(6) {
+    border-color: #71E727;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(7) {
+    border-color: #73CEFE;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(8) {
+    border-color: #0385E7;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(9) {
+    border-color: #4147FF;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(10) {
+    border-color: #8603FF;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(11) {
+    border-color: #EA15FF;
+}
+
+.categories-menu-wrapper ul.categories-menu>li:nth-child(12) {
+    border-color: #DF0303;
+}
+
+
+.categories-menu-wrapper ul.categories-menu>li>a {
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+.categories-menu-wrapper ul.categories-menu>li:not(:last-child)>a{
+    border-bottom: 0.6px solid #1111114D;
+}
+.child-menu-wrapper{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}

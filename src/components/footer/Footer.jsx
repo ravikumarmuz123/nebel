@@ -6,6 +6,38 @@ import { images } from '../../assets/assetsManager'
 const Footer = () => {
     return (
         <footer id="site-footer">
+            <div className="footer_contact_section container">
+                <h2 className="section-title text-center">Kontaktieren Sie uns</h2>
+                <p class="text-center">Brauchen Sie Hilfe bei einer Anfrage, Bestellung oder haben Sie eine andere Frage? Nehmen Sie Kontakt mit uns auf!</p>
+                <div class="footer-contact-banner">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <div class="d-flex justify-content-center gap-3">
+                                <div>
+                                    <h5 class="title mb-0">TELEFON</h5>
+                                    <a href="tel: +43 (0) 1 58802">+43 (0) 1 58802</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 border-start border-end">
+                            <div class="d-flex justify-content-center gap-3">
+                                <div>
+                                    <h5 class="title mb-0">E-MAIL</h5>
+                                    <a href="mailto:office@nebel.co.at">office@nebel.co.at</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="d-flex justify-content-center gap-3">
+                                <div>
+                                    <h5 class="title mb-0">FAX</h5>
+                                    <p class="mb-0">+43 (0) 1 58802 - 32</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="footer_top_wrapper">
                 <div className="container">
                     <div className="row gy-3">

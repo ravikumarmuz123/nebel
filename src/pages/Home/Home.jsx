@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Home.css'
 import CategoriesMenu from '../../components/homepage/CategoriesMenu'
 import FeaturedCategories from '../../components/homepage/FeaturedCategories'
@@ -30,9 +31,17 @@ const Home = () => {
                         <h2 className="section-title text-center mb-5">Firmen</h2>
                         <FeaturedBrandsGrid />
                     </section>
-                    <section className="section section-categories-grid">
+                    <section className="section section-categories-grid mb-120px">
                         <h2 className="section-title text-center mb-5">Unsere Kategorien</h2>
                         <CategoriesGrid />
+                    </section>
+                    <section className="section section-about-nebel">
+                        <h2 className="section-title">nebel: Eine Reise zu drucktechnischen und buchbinderischen Spitzenleistungen buchbinderischen Spitzenleistungen</h2>
+                        <p>Lorem ipsum dolor Dummy Content Dolor Amet Sit Consectur ist einfach Blindtext der Druck- und Satzindustrie. Lorem Ipsum ist der Standard-Dummy-Text der Branche. Lorem ipsum dolor Dummy Content Dolor Amet Sit Consectur ist einfach Blindtext der Druck- und Satzindustrie. Lorem Ipsum ist der Standard-Dummy-Text der Branche. Lorem ipsum dolor Dummy Content Dolor Amet Sit Consectur ist einfach Blindtext der Druck- und Satzindustrie. Lorem Ipsum ist der Standard-Dummy-Text der Branche.</p>
+                        <p>Lorem ipsum dolor Dummy Content Dolor Amet Sit Consectur ist einfach Blindtext der Druck- und Satzindustrie. Lorem Ipsum ist der Standard-Dummy-Text der Branche. Lorem ipsum dolor Dummy-Inhalt dolor amet sit consectur ist einfach Dummy-Text</p>
+                        <div className="mt-4">
+                            <Link to="/about-us" className="cta-button button-hover">mehr über das Unternehmen erfahren</Link>
+                        </div>
                     </section>
                 </div>
             </div>

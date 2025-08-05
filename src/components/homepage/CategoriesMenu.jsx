@@ -17,7 +17,7 @@ const CategoriesMenu = () => {
                                     category.children &&
                                     <span className="arrow">
                                         <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5625 8.0625L4.0625 4.5625L0.5625 1.0625" stroke="#53A447" stroke-linecap="round" />
+                                            <path d="M0.5625 8.0625L4.0625 4.5625L0.5625 1.0625" stroke="#53A447" strokeLinecap="round" />
                                         </svg>
                                     </span>
                                 }

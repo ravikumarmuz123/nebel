@@ -10,7 +10,7 @@ const FeaturedProductsSlider = () => {
                 {
                     featuredProducts.map((product, index) => {
                         return (
-                            <button type="button" data-bs-target="#featureProductSlider" data-bs-slide-to={index} className={index === 0 ? "active" : ""}></button>
+                            <button type="button" data-bs-target="#featureProductSlider" data-bs-slide-to={index} className={index === 0 ? "active" : ""} key={index}></button>
                         )
                     })
                 }
@@ -19,7 +19,7 @@ const FeaturedProductsSlider = () => {
                 {
                     featuredProducts.map((product, index) => {
                         return (
-                            <div className={`carousel-item position-relative ${index === 0 ? "active" : ""}`}>
+                            <div className={`carousel-item position-relative ${index === 0 ? "active" : ""}`} key={index}>
                                 <img src={product.image} className="d-block w-100" alt="..." />
                                 <div className="content">
                                     <h2>{product.title}</h2>

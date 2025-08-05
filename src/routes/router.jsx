@@ -4,6 +4,7 @@ import { lazy, Suspense } from "react";
 import ProtectedRoute from "./ProtectedRoutes";
 import RootLayout from "../layouts/RootLayout";
 import Spinner from "../components/Spinner";
+import AdminLayout from "../layouts/AdminLayout";
 
 // Public Pages
 const Home = lazy(() => import('../pages/Home/Home'))
@@ -50,6 +51,24 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: '/admin',
+        element: <AdminLayout />,
+        children: [
+            {
+                index: true,
+                element: <h1>Dashboard</h1>
+            },
+            {
+                path: '/admin/dashboard',
+                element: <h1>Dashboard</h1>
+            },
+            {
+                path: '/admin/*',
+                element: <h1>404 - Page not found</h1>
+            }
+        ]
+    }
 ]);
 
 export default router

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+}
+
+aside#adminSidebar {
+    background: #293042;
+    color: #FFFFFF;
+    min-height: 100vh;
+    max-width: 260px;
+    min-width: 260px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar Menu Styles */
+
+.sidebar-link, a.sidebar-link {
+    color: rgba(226,232,238,.5);
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    padding: .625rem 1.625rem;
+    position: relative;
+    text-decoration: none;
+    transition: color 75ms ease-in-out;
+}
+
+.sidebar-link:hover, a.sidebar-link:hover,
+.sidebar-link.active, a.sidebar-link.active {
+    color: #e2e8ee;;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #8B96A81A;
+}
+header#adminHeader {
+    font-size: 14px;
+    box-shadow: 0 0 2rem 0 rgba(41, 48, 66, .1);
+}
+main#adminContent {
+    direction: ltr;
+    flex: 1;
+}

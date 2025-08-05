@@ -5,10 +5,12 @@ import ProtectedRoute from "./ProtectedRoutes";
 import RootLayout from "../layouts/RootLayout";
 import Spinner from "../components/Spinner";
 
+// Public Pages
 const Home = lazy(() => import('../pages/Home/Home'))
 const Search = lazy(() => import('../pages/Search/Search'))
 const Login = lazy(() => import('../pages/Login/Login'))
 
+// Protected Pages
 const Profile = lazy(() => import('../pages/User/Profile'))
 
 const lazyLoader = (Component) => {

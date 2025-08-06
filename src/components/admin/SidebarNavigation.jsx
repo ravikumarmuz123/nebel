@@ -6,7 +6,7 @@ const SidebarNavigation = () => {
     const links = [
         {
             title: 'Dashboard',
-            url: '/dashboard',
+            url: '/',
             icon: 'bi bi-house'
         },
         {
@@ -14,8 +14,18 @@ const SidebarNavigation = () => {
             url: '/products',
             icon: 'bi bi-box-seam',
             Children: [
+                { title: 'Product List', url: '/products' },
                 { title: 'Add Product', url: '/products/add' },
-                { title: 'Edit Product', url: '/products/edit' },
+                { title: 'Variations', url: '/products/variations' },
+            ]
+        },
+        {
+            title: 'Categories',
+            url: '/categories',
+            icon: 'bi bi-box-seam',
+            Children: [
+                { title: 'Category List', url: '/categories' },
+                { title: 'Add Category', url: '/categories/add' },
             ]
         },
         {
@@ -37,13 +47,14 @@ const SidebarNavigation = () => {
                         {
                             link.Children ? (
 
-                                <NavLink to={`/admin${link.url}`} data-bs-toggle="collapse" data-bs-target={`#${index}`} className="sidebar-link dropdown-toggle">
+                                <NavLink to={`/admin${link.url}`} data-bs-toggle="collapse" data-bs-target={`#${index}`} className="sidebar-link">
                                     <i className={`${link.icon} me-2`}></i>
                                     <span>{link.title}</span>
+                                    <i className="bi bi-chevron-down ms-auto"></i>
                                 </NavLink>
 
                             ) : (
-                                <NavLink to={`/admin${link.url}`} className="sidebar-link">
+                                <NavLink to={`/admin${link.url}`} className="sidebar-link" end>
                                     <i className={`${link.icon} me-2`}></i>
                                     <span>{link.title}</span>
                                 </NavLink>
@@ -55,7 +66,7 @@ const SidebarNavigation = () => {
                                 <ul id={index} className="sidebar-dropdown list-unstyled collapse">
                                     {link.Children.map((child, index) => (
                                         <li key={index} className="menu-item">
-                                            <NavLink to={`/admin${child.url}`} className="sidebar-link">
+                                            <NavLink to={`/admin${child.url}`} className="sidebar-link" end>
                                                 {child.title}
                                             </NavLink>
                                         </li>

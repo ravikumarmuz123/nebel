@@ -6,7 +6,7 @@ import './AdminLayout.css'
 
 const AdminLayout = () => {
   return (
-    <div className='d-flex'>
+    <div className='d-flex admin-app-layout'>
       <Sidebar />
       <div className="content-wrapper">
         <Header />

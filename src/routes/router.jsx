@@ -3,8 +3,9 @@ import { lazy, Suspense } from "react";
 
 import ProtectedRoute from "./ProtectedRoutes";
 import RootLayout from "../layouts/RootLayout";
-import Spinner from "../components/Spinner";
 import AdminLayout from "../layouts/AdminLayout";
+import Spinner from "../components/Spinner";
+import ErrorPage from "../pages/ErrorPage";
 
 // Public Pages
 const Home = lazy(() => import('../pages/Home/Home'))
@@ -13,6 +14,11 @@ const Login = lazy(() => import('../pages/Login/Login'))
 
 // Protected Pages
 const Profile = lazy(() => import('../pages/User/Profile'))
+
+// Admin Pages
+const AdminDashboard = lazy(() => import('../pages/Admin/Dashboard'))
+const ProductCategories = lazy(() => import('../pages/Admin/Categories/ProductCategories'))
+const AddCategory = lazy(() => import('../pages/Admin/Categories/AddCategory'))
 
 const lazyLoader = (Component) => {
     return (
@@ -26,17 +32,18 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <RootLayout />,
+        errorElement: <ErrorPage />,
         children: [
             {
-                path: '/',
+                index: true,
                 element: lazyLoader(Home)
             },
             {
-                path: '/search',
+                path: 'search',
                 element: lazyLoader(Search)
             },
             {
-                path: '/login',
+                path: 'login',
                 element: lazyLoader(Login)
             },
             {
@@ -54,19 +61,29 @@ const router = createBrowserRouter([
     {
         path: '/admin',
         element: <AdminLayout />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
-                element: <h1>Dashboard</h1>
+                element: lazyLoader(AdminDashboard)
             },
             {
-                path: '/admin/dashboard',
-                element: <h1>Dashboard</h1>
+                path: 'categories',
+                children: [
+                    {
+                        index: true,
+                        element: lazyLoader(ProductCategories)
+                    },
+                    {
+                        path: 'add',
+                        element: lazyLoader(AddCategory)
+                    }
+                ]
             },
             {
-                path: '/admin/*',
+                path: '*',
                 element: <h1>404 - Page not found</h1>
-            }
+            },            
         ]
     }
 ]);

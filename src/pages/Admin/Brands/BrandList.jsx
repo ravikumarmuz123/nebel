@@ -56,6 +56,7 @@ const BrandList = () => {
                                                     className="img-fluid"
                                                 />
                                             )}
+                                            {console.log(import.meta.env.VITE_SERVER_URL)}
                                         </td>
                                         <td>{brand.name}</td>
                                         <td>

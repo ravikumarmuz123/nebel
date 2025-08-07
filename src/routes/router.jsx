@@ -18,7 +18,7 @@ const Profile = lazy(() => import('../pages/User/Profile'))
 // Admin Pages
 const AdminDashboard = lazy(() => import('../pages/Admin/Dashboard'))
 const ProductCategories = lazy(() => import('../pages/Admin/Categories/ProductCategories'))
-const AddCategory = lazy(() => import('../pages/Admin/Categories/AddCategory'))
+const BrandList = lazy(() => import('../pages/Admin/Brands/BrandList'))
 
 const lazyLoader = (Component) => {
     return (
@@ -69,16 +69,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'categories',
-                children: [
-                    {
-                        index: true,
-                        element: lazyLoader(ProductCategories)
-                    },
-                    {
-                        path: 'add',
-                        element: lazyLoader(AddCategory)
-                    }
-                ]
+                element: lazyLoader(ProductCategories)
+            },
+            {
+                path: 'brands',
+                element: lazyLoader(BrandList)
             },
             {
                 path: '*',

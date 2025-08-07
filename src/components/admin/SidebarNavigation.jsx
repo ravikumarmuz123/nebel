@@ -15,7 +15,6 @@ const SidebarNavigation = () => {
             icon: 'bi bi-box-seam',
             Children: [
                 { title: 'Product List', url: '/products' },
-                { title: 'Add Product', url: '/products/add' },
                 { title: 'Variations', url: '/products/variations' },
             ]
         },
@@ -23,10 +22,11 @@ const SidebarNavigation = () => {
             title: 'Categories',
             url: '/categories',
             icon: 'bi bi-box-seam',
-            Children: [
-                { title: 'Category List', url: '/categories' },
-                { title: 'Add Category', url: '/categories/add' },
-            ]
+        },
+        {
+            title: 'Brands',
+            url: '/brands',
+            icon: 'bi bi-box-seam',
         },
         {
             title: 'Orders',

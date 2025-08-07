@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './FeaturedBrandsGrid.css'
-import { brands } from '../../assets/assetsManager'
+import { getAllBrands } from '../../api/brandApi';
 
 const FeaturedBrandsGrid = () => {
+    const [brands, setBrands] = useState([]);
+
+    const fetchBrands = async () => {
+        try {
+            const response = await getAllBrands();
+            setBrands(response.data);
+        } catch (err) {
+            setError('Failed to load brands');
+        }
+    }
+    useEffect(() => {
+        fetchBrands();
+    }, []);
     return (
         <div className="brand-grid">
             {/* First row with 5 items */}
             <div className="d-flex align-items-center justify-content-between column-gap-5 row-gap-3 mb-5">
                 {brands.slice(0, 5).map((brand, index) => (
                     <div className="brand-item" key={index}>
-                        <img src={brand.logo} alt="" />
+                        <img src={`${import.meta.env.VITE_SERVER_URL}${brand.image}`} alt="" />
                     </div>
                 ))}
             </div>
@@ -26,7 +39,7 @@ const FeaturedBrandsGrid = () => {
                     <div className={`d-flex align-items-center justify-content-evenly column-gap-5 row-gap-3 ${isNotLastRow ? 'mb-5' : ''}`} key={rowIndex}>
                         {rowBrands.map((brand, index) => (
                             <div className="brand-item" key={index}>
-                                <img src={brand.logo} alt="" />
+                                <img src={`${import.meta.env.VITE_SERVER_URL}${brand.image}`} alt="" />
                             </div>
                         ))}
                     </div>

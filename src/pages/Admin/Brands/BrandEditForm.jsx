@@ -6,7 +6,7 @@ const BrandEditForm = ({ brand }) => {
     
     return (
         <>
-            <Button variant="outline-primary btn-sm" onClick={() => setShow(true)} className="me-2">Edit</Button>
+            <Button variant="outline-primary btn-sm" onClick={() => setShow(true)} className="me-2"><i className='bi bi-pencil'></i></Button>
             <Modal show={show} onHide={() => setShow(false)}>
                 <Modal.Header closeButton onClick={() => setShow(false)}>
                     <Modal.Title>Edit Brand</Modal.Title>

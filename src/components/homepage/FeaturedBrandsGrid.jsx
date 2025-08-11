@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './FeaturedBrandsGrid.css'
 import { getAllBrands } from '../../api/brandApi';
 
@@ -10,7 +11,7 @@ const FeaturedBrandsGrid = () => {
             const response = await getAllBrands();
             setBrands(response.data);
         } catch (err) {
-            setError('Failed to load brands');
+            console.log(err)
         }
     }
     useEffect(() => {
@@ -21,9 +22,9 @@ const FeaturedBrandsGrid = () => {
             {/* First row with 5 items */}
             <div className="d-flex align-items-center justify-content-between column-gap-5 row-gap-3 mb-5">
                 {brands.slice(0, 5).map((brand, index) => (
-                    <div className="brand-item" key={index}>
+                    <Link to={`/brands/${brand.slug}`} className="brand-item" key={index}>
                         <img src={`${import.meta.env.VITE_SERVER_URL}${brand.image}`} alt="" />
-                    </div>
+                    </Link>
                 ))}
             </div>
 
@@ -38,9 +39,9 @@ const FeaturedBrandsGrid = () => {
                 return (
                     <div className={`d-flex align-items-center justify-content-evenly column-gap-5 row-gap-3 ${isNotLastRow ? 'mb-5' : ''}`} key={rowIndex}>
                         {rowBrands.map((brand, index) => (
-                            <div className="brand-item" key={index}>
+                            <Link to={`/brands/${brand.slug}`} className="brand-item" key={index}>
                                 <img src={`${import.meta.env.VITE_SERVER_URL}${brand.image}`} alt="" />
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 );

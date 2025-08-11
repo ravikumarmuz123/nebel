@@ -6,7 +6,7 @@ const SidebarNavigation = () => {
     const links = [
         {
             title: 'Dashboard',
-            url: '/',
+            url: '',
             icon: 'bi bi-house'
         },
         {

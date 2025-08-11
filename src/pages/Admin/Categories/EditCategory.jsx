@@ -5,7 +5,7 @@ const EditCategory = ({ cat, onSave }) => {
     const [show, setShow] = useState(false);
     return (
         <>
-            <Button variant="primary btn-sm" className="me-2" onClick={() => setShow(true)}><i className="bi bi-pencil"></i></Button>
+            <Button variant="outline-primary btn-sm" className="me-2" onClick={() => setShow(true)}><i className="bi bi-pencil"></i></Button>
             <Modal show={show} onHide={() => setShow(false)}>
                 <Modal.Header closeButton onClick={() => setShow(false)}>
                     <Modal.Title>Edit Category</Modal.Title>

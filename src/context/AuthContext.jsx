@@ -1,25 +1,18 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { userLogin } from '../api/authApi';
+// src/context/AuthContext.jsx
+import { createContext, useContext, useEffect, useState } from 'react';
+import { getCurrentUser, loginUser, registerUser, verifyCode } from '../api/authApi';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const navigate = useNavigate();
-    const [user, setUser] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-
-    const login = async (email, password) => {
-        
-    };
-
-    const logout = () => {
-        
-    };
+    // Load user on mount if token exists
+   
 
     return (
-        <AuthContext.Provider value={{ user, login, logout, loading }}>
+        <AuthContext.Provider value={{  }}>
             {children}
         </AuthContext.Provider>
     );

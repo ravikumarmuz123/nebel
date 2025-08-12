@@ -10,7 +10,8 @@ import ErrorPage from "../pages/ErrorPage";
 // Public Pages
 const Home = lazy(() => import('../pages/Home/Home'))
 const Search = lazy(() => import('../pages/Search/Search'))
-const Login = lazy(() => import('../pages/Login/Login'))
+const Login = lazy(() => import('../pages/User/Login'))
+const Verify = lazy(() => import('../pages/User/Verify'))
 
 // Protected Pages
 const Profile = lazy(() => import('../pages/User/Profile'))
@@ -43,15 +44,26 @@ const router = createBrowserRouter([
                 element: lazyLoader(Search)
             },
             {
-                path: 'login',
-                element: lazyLoader(Login)
-            },
-            {
-                path: '/user/profile',
-                element: <ProtectedRoute>
-                    {lazyLoader(Profile)}
-                </ProtectedRoute>
-            },
+                path:'user',
+                children: [
+                    {
+                        index: true,
+                        element: <ProtectedRoute><Profile /></ProtectedRoute>
+                    },
+                    {
+                        path: 'login',
+                        element: lazyLoader(Login)
+                    },
+                    {
+                        path: 'verify',
+                        element: lazyLoader(Verify)
+                    },
+                    {
+                        path: '*',
+                        element: <h1 className="container py-5">404 - Page not found</h1>
+                    }
+                ]
+            },            
             {
                 path: '*',
                 element: <h1 className="container py-5">404 - Page not found</h1>

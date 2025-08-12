@@ -144,3 +144,6 @@ h2.section-title {
 .mb-120px {
     margin-bottom: 120px;
 }
+.cursor-pointer {
+    cursor: pointer;
+}
